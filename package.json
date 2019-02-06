@@ -1,0 +1,22 @@
+{
+  "name": "hw3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "~1.17.2",
+    "browser-detect": "^0.2.28",
+    "cors": "~2.8.3",
+    "detect-browser": "^3.0.0",
+    "express": "~4.15.3",
+    "ipinfo": "^1.3.8",
+    "mongoose": "~4.11.0",
+    "random-token-generator": "^1.0.2",
+    "request-ip": "^2.1.1"
+  },
+  "author": "Gurkan Kisaoglu",
+  "license": "ISC"
+}

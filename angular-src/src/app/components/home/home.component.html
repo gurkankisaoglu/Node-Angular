@@ -1,0 +1,28 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/home">SRDC User Management</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="active"><a href="/home">Home</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Options
+          <span class="caret"></span></a>
+        <ul class="dropdown-menu"  id="options">
+          <li><a class="dropdown-item" (click)="getInbox()">Inbox</a></li>
+          <li><a class="dropdown-item" (click)="getOutbox()">Outbox</a></li>
+          <li><a class="dropdown-item" (click)="getMailScreen()">Send Mail</a></li>
+          <li><a class="dropdown-item" *ngIf="checkAdmin()" (click)="getOpPanel()">Operation Panel</a> </li>
+          <li><a class="dropdown-item" (click)="getLoginScreen()">Logout</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>Welcome to SRDC User Management Application</h1>
+    <p>SRDC Corp. is founded by a professional team of engineers directed by Prof. Dr. Asuman Dogac in Technopolis, located at the Middle East Technical University. SRDC Corp. is a spin-off of METU-SRDC.</p>
+  </div>
+</div>

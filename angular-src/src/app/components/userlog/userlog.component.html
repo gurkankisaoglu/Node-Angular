@@ -1,0 +1,21 @@
+<body>
+<div class="container">
+  <table class="table" >
+    <thead class="thead-dark">
+    <tr>
+      <th scope="col"><button >username</button></th>
+      <th scope="col"><button >login</button></th>
+      <th scope="col"><button >logout</button></th>
+    </tr>
+    </thead>
+    <tbody id="logTable">
+    <tr *ngFor="let list of tokenServ.logs">
+      <td>{{list.username}}</td>
+      <td>{{list.Login}}</td>
+      <td>{{list.Logout}}</td>
+    </tr>
+    </tbody>
+  </table>
+  <button type="button" (click)="goBack()">Go Back! </button>
+</div>
+

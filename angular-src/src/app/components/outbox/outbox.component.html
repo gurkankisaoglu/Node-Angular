@@ -1,0 +1,25 @@
+<body>
+<div class="container">
+  <table class="table" >
+    <thead class="thead-dark">
+    <tr>
+      <th scope="col"><button (click)="sort(0)">From</button></th>
+      <th scope="col"><button (click)="sort(1)">To</button></th>
+      <th scope="col"><button (click)="sort(2)">Date</button></th>
+      <th scope="col"><button (click)="sort(3)">Subject</button></th>
+      <th scope="col"><button (click)="sort(4)">Message</button></th>
+    </tr>
+    </thead>
+    <tbody id="outboxTable">
+    <tr *ngFor="let list of messageServ.messages">
+      <td>{{list.from}}</td>
+      <td>{{list.to}}</td>
+      <td>{{list.date}}</td>
+      <td>{{list.subject}}</td>
+      <td>{{list.text}}</td>
+    </tr>
+    </tbody>
+  </table>
+  <button type="button" (click)="goHome()">Go Home! </button>
+</div>
+

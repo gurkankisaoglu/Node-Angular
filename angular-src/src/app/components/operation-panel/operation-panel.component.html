@@ -1,0 +1,49 @@
+<div class="jumbotron">
+
+  <table class="table" >
+    <thead class="thead-dark">
+    <tr>
+      <th scope="col"><button (click)="sort(0)">username</button></th>
+      <th scope="col"><button (click)="sort(1)">password</button></th>
+      <th scope="col"><button (click)="sort(3)">email</button></th>
+      <th scope="col"><button (click)="sort(4)">gender</button></th>
+      <th scope="col"><button (click)="sort(5)">address</button></th>
+      <th scope="col"><button (click)="sort(6)">authority</button></th>
+      <th scope="col"><button (click)="sort(7)">operation</button><button type="button" class="infoButton" (click)="loadInfo()"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></button></th>
+    </tr>
+    </thead>
+    <tbody id="usersTable">
+    <tr>
+      <td><input type="text" class="form-control" placeholder="username" #u></td>
+      <td><input type="text" class="form-control" placeholder="password" #p></td>
+      <td><input type="text" class="form-control" placeholder="email" #e></td>
+      <td><input type="text" class="form-control" placeholder="gender" #g></td>
+      <td><input type="text" class="form-control" placeholder="address" #a></td>
+      <td><input type="text" class="form-control" placeholder="authority" #a2></td>
+      <td><button type="button" class="btn-default" (click)="addUser(u,p,e,g,a,a2)">Add</button></td>
+    </tr>
+    <tr *ngFor="let list of userServ.users">
+      <td>{{list.username}}</td>
+      <td>{{list.password}}</td>
+      <td>{{list.email}}</td>
+      <td>{{list.gender}}</td>
+      <td>{{list.address}}</td>
+      <td>{{list.authority}}</td>
+      <td>
+        <input #newProperty type="text" class="form-control" placeholder="Enter New Property">
+        <input #changeProperty type="text" class="form-control" placeholder="Enter Property To Be Changed">
+
+        <div>
+
+
+            <button #updateButton type="button btn-secondary" (click)="updateUser(updateButton,newProperty,changeProperty)">Update</button>
+            <button #deleteButton type="button btn-secondary" (click)="deleteUser(deleteButton)">Delete</button>
+         </div>
+
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <button type="button" (click)="goHome()">Go Home! </button>
+</div>
